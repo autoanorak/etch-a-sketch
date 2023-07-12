@@ -8,25 +8,39 @@ html {
   box-sizing: inherit;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-height: 50vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px;
+  min-width: 500px;
+  max-width: 500px;
 }
 
 .row {
-  background-color: red;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex: 0 0 100%;
+  flex: 1 0 1px;
 }
 
 .item {
-  background-color: blue;
+  background-color: grey;
   display: flex;
-  flex: 0 0 16px;
+  flex: 1 0 1px;
+}
+
+.hover {
+  background-color: black;
+}
+
+.centered {
+  text-align: center;
+  margin: 20px 0;
 }
