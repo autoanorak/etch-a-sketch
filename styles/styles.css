@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -15,29 +19,23 @@ html {
   margin: 20px 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 500px;
-  min-width: 500px;
-  max-width: 500px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex: 1 0 1px;
-}
-
-.item {
+.grid {
+  display: grid;
+  height: 500px;
+  width: 500px;
   background-color: grey;
-  display: flex;
-  flex: 1 0 1px;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
 }
 
-.hover {
+.etched {
   background-color: black;
+}
+
+button {
+  text-align: center;
+  padding: 8px 10px;
+  font-family: inherit;
 }
 
 .centered {
