@@ -23,13 +23,25 @@ body {
   display: grid;
   height: 500px;
   width: 500px;
-  background-color: grey;
   grid-template-rows: repeat(16, 1fr);
   grid-template-columns: repeat(16, 1fr);
 }
 
+.item {
+  background-color: rgb(180, 180, 180);
+}
+
 .etched {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+}
+
+.progressive-etched {
+
+}
+
+.clicked {
+  background-color: #504e4e;
+  color: white;
 }
 
 button {
