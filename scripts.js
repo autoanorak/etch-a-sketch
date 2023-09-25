@@ -41,7 +41,9 @@ function promptUserForSize() {
     size = parseInt(prompt('Size of grid:'));
   } while (size > 100 || size < 1);
 
-  updateGrid();  
+  if (size) {
+    updateGrid();  
+  }
 }
 
 
