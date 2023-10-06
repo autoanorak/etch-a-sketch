@@ -113,7 +113,7 @@ function sketch(e) {
 }
 
 
-function eraserMode(e) {
+function eraserMode() {
   eraserBtn.classList.toggle('clicked');
 
   if (erase === false) {
@@ -121,11 +121,17 @@ function eraserMode(e) {
   } else {
     erase = false;
   }
+
+  // Prevent simultaneous activation of eraser mode and other modes
+  progressiveBtn.classList.remove('clicked');
+  progressive = false;
+  randomBtn.classList.remove('clicked');
+  random = false;
 }
 
 
 function eraseSketch(e) {
-  e.target.style.backgroundColor = 'inherit';
+  e.target.style.backgroundColor = 'var(--sketch-background)';
 }
 
 
@@ -140,9 +146,11 @@ function progressiveMode() {
     progressive = false;
   }
 
-  // Prevent simultaneous activation of random mode and progressive mode
+  // Prevent simultaneous activation of progressive mode and other modes
   randomBtn.classList.remove('clicked');
   random = false;
+  eraserBtn.classList.remove('clicked');
+  erase = false;
 }
 
 
@@ -203,9 +211,11 @@ function randomMode() {
     random = false;
   }
 
-  // Prevent simultaneous activation of progressive mode and random mode
+  // Prevent simultaneous activation of random mode and other modes
   progressiveBtn.classList.remove('clicked');
   progressive = false;
+  eraserBtn.classList.remove('clicked');
+  erase = false;
 }
 
 

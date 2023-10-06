@@ -1,3 +1,9 @@
+/* Globals */
+
+:root {
+  --sketch-background: rgb(200, 200, 200);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -12,6 +18,9 @@ html {
   font-family: 'Fira Sans', sans-serif;
   margin: 0;
 }
+
+
+/* General layout */
 
 .wrapper {
   display: flex;
@@ -81,8 +90,11 @@ header h1 {
 }
 
 .item {
-  background-color: rgb(200, 200, 200);
+  background-color: var(--sketch-background);
 }
+
+
+/* States */
 
 .etched {
   background-color: rgb(0, 0, 0);
